@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
-import contractAddress from "../chain-info/deployments/map.json"
+// import contractAddress from "../chain-info/deployments/map.json"
 import axios from "axios"
 import styles from "../styles/Nfts.module.css"
 
 function MyNfts({ account }) {
-  const contract = contractAddress["11155111"]["AINFTS"][0]
+  const contract = "0x34dff4173d4054842590b056e3ca18188ebc19a5"
   const [nfts, setNfts] = useState()
 
   useEffect(() => {
@@ -20,10 +20,11 @@ function MyNfts({ account }) {
       console.log(account)
     }
     fetchData()
-  }, [])
+  }, [account])
 
   const renderedNFts =
     nfts &&
+    // eslint-disable-next-line
     Object.values(nfts).map((nft) => {
       if (nft.minter_address === account) {
         return (
