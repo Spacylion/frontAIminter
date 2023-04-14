@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
+
+* {
+  font-family: "Orbitron", sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bg.png), no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-family: "Orbitron", sans-serif;
+}
+
+.glass {
+  padding: 1rem 1rem;
+  color: #6c9a9a;
+  backdrop-filter: blur(5px);
+  background-color: hsl(23, 38%, 75%);
+  border-radius: 2vh 0 0 0;
+  box-shadow: 35px 35px 68px 0px rgba(145, 192, 255, 0.5),
+    inset -8px -8px 16px 0px rgba(145, 192, 255, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  background-position: top right, top right, bottom left, bottom left, top left;
+  background-size: calc(100% - 15px) 2px, 2px 100%, 100% 2px,
+    2px calc(100% - 15px), 15px 15px;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 40px;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  background-color: #0070f3;
+  font-family: "Orbitron", sans-serif;
+
+  color: #6c9a9a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0051cb;
+}
+
+.button:disabled {
+  background-color: #a6a6a6;
+  cursor: not-allowed;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.inputContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  min-width: 350px;
+  font-size: 1rem;
+  outline: none;
+  margin-right: 1rem;
+}
+
+.generateButton {
+  padding: 0.5rem 1rem;
+  background-color: #3c949a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.generateButton:hover {
+  background-color: #2fdae6;
+}
+
+.generateButton:disabled {
+  background-color: #a6a6a6;
+  cursor: not-allowed;
+}
+
+.imageContainer {
+  width: 100%;
+  max-width: 512px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.removeButton {
+  margin-left: 1rem;
+  padding: 0.3rem 0.3rem;
+  background-color: #4d1a1a;
+  color: #ef9900;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.removeButton:hover {
+  background-color: #b03c3c;
+}
+
+.removeButton i {
+  font-size: 1rem;
+}
+
+@keyframes generateButton {
+  0% {
+    background-color: transparent;
+    color: grey;
+  }
+  50% {
+    background-color: cadetblue;
+    color: #333;
+  }
+  100% {
+    background-color: transparent;
+    color: grey;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .inputContainer {
+    display: block;
+    align-items: center;
+    text-align: center;
+    padding: 14px;
+    margin: 2rem;
+  }
+
+  .generateButton {
+    margin: 14px;
+  }
+
+  .glass {
+    padding: 0;
+    margin: 0;
+
+    width: 100%;
+    color: #6c9a9a;
+    backdrop-filter: blur(5px);
+    background-color: hsl(23, 38%, 75%);
+    border-radius: 0 0 0;
+  }
+  .inputContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  .input {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    min-width: 120px;
+    font-size: 1rem;
+    outline: none;
+    margin-right: 0;
+  }
+}
