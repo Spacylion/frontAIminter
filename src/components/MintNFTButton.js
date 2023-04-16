@@ -15,7 +15,8 @@ const MintNFTButton = ({ image, signer }) => {
       }
 
       const ipfsResponse = await axios.post(
-        "http://127.0.0.1:5002/uploadToIpfs",
+        "http://backendflasky.space/uploadToIpfs",
+        // "http://127.0.0.1:5002/uploadToIpfs",
         JSON.stringify(requestBody),
         {
           headers: {
@@ -28,9 +29,13 @@ const MintNFTButton = ({ image, signer }) => {
       console.log("IPFS upload result:", ipfsResponse.data)
 
       // Step 2: Upload the URI
-      const uriResponse = await axios.post("http://127.0.0.1:5002/uploadUri", {
-        img: imagePath,
-      })
+      // const uriResponse = await axios.post("http://127.0.0.1:5002/uploadUri", {
+      const uriResponse = await axios.post(
+        "http://backendflasky.space/uploadUri",
+        {
+          img: imagePath,
+        }
+      )
 
       console.log("URI upload result:", uriResponse.data)
 

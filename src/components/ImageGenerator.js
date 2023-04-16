@@ -24,7 +24,10 @@ export default function ImageGenerator({
 
     try {
       const response = await axios.post(
-        `http://127.0.0.1:5002/generate?prompt=${encodeURIComponent(prompt)}`
+        // `http://127.0.0.1:5002/generate?prompt=${encodeURIComponent(prompt)}`
+        `http://backendflasky.space/generate?prompt=${encodeURIComponent(
+          prompt
+        )}`
       )
       setImage(`data:image/png;base64,${response.data.image}`)
       setIsGenerated(true)

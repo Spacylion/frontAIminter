@@ -9,7 +9,8 @@ function MyNfts({ account }) {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get("http://localhost:5002/get_nfts", {
+      // const response = await axios.get("http://localhost:5002/get_nfts", {
+      const response = await axios.get("http://backendflasky.space/get_nfts", {
         params: {
           address: contract,
         },

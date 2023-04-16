@@ -1,12 +1,18 @@
+body {
+  background-color: rgb(0, 0, 0);
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh;
-  background: url(../img/nftsbg.png), no-repeat;
+  background: url(../img/nftsbg.png);
+  background-repeat: repeat-y;
   background-size: cover;
-  background-position: center;
+
+  z-index: -999;
 }
 
 .nfts-container {
